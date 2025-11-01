@@ -240,6 +240,10 @@ sudo sysrc clear_tmp_enable="YES"
 # 8-9.画面スライドショーしたい
 sudo pkg install -y -q feh
 
+# 7-12.端末を閉じても、作業を続けられるようにしたい
+sudo pkg install -y -q tmux
+cp ./.tmux.conf ~
+
 # 7-3.Windowsやmacとファイル共有したい(SMB)
 sudo pkg install -y -q samba416
 sudo service samba_server enable
