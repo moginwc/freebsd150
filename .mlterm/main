@@ -10,3 +10,4 @@ word_separators = " ="
 logsize = 8192
 use_combining = false
 static_backscroll_mode = true
+box_drawing_font = decsp
