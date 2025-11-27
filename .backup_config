@@ -19,3 +19,4 @@ etc/pkg/FreeBSD.conf
 usr/local/etc/pkg/repos/quarterly.conf
 etc/pf.conf
 usr/local/etc/nginx/nginx.conf
+etc/jail.conf
