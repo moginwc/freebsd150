@@ -49,6 +49,13 @@ AddToFunc Func-LaunchOrRaise_mlterm
 + I Next (mlterm) Focus
 + I None (mlterm) Exec mlterm --geometry=80x24 --title="端末エミュレータ"
 
+# ランチャー(xfce4-terminal) 起動またはフォーカスする
+DestroyFunc Func-LaunchOrRaise_xfce4terminal
+AddToFunc Func-LaunchOrRaise_xfce4terminal
++ I All (xfce4-terminal) Raise
++ I Next (xfce4-terminal) Focus
++ I None (xfce4-terminal) Exec xfce4-terminal --geometry=80x24 --title="端末エミュレータ"
+
 # ランチャー(conky) 起動またはフォーカスする
 DestroyFunc Func-LaunchOrRaise_conky
 AddToFunc Func-LaunchOrRaise_conky
