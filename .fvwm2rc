@@ -68,7 +68,7 @@ DestroyFunc Func-LaunchOrRaise_hidemaru
 AddToFunc Func-LaunchOrRaise_hidemaru
 + I All  (hidemaru.exe) Raise
 + I Next (hidemaru.exe) Focus
-+ I None (hidemaru.exe) Exec wine $HOME/.wine/drive_c/Program\ Files/Hidemaru/Hidemaru.exe
++ I None (hidemaru.exe) Exec wine $HOME/wine_bin/Hidemaru/Hidemaru.exe
 
 #----------------------------------------------------------------------
 # 2: スタイル
@@ -262,7 +262,7 @@ AddToMenu xfce4terminal_menu
 # ランチャー(hidemaru)右クリックメニュー
 AddToMenu hidemaru_menu
 +                     "秀丸エディタ"                    Title
-+                     "新規ドキュメント"                Exec wine $HOME/.wine/drive_c/Program\ Files/Hidemaru/Hidemaru.exe
++                     "新規ドキュメント"                Exec wine $HOME/wine_bin/Hidemaru/Hidemaru.exe
 +                     ""                                Nop
 +                     "終了"                            All (hidemaru.exe) Close
 
