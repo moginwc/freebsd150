@@ -19,10 +19,10 @@ regedit /s ./wine-japanese.reg
 
 # 秀丸インストール
 sudo pkg install -y cabextract # 秀丸のインストーラーの実態は.cabファイル
-fetch https://hide.maruo.co.jp/software/bin/hm950_x64_signed.exe
+fetch https://hide.maruo.co.jp/software/bin3/hm950_x64_signed.exe
 if ( -f ./hm950_x64_signed.exe) then
     mkdir hidemaru
-    cabextract -d ./hidemaru hm948_x64_signed.exe
+    cabextract -d ./hidemaru hm950_x64_signed.exe
     mkdir ~/wine_bin
     cp -r hidemaru ~/wine_bin/Hidemaru
 
