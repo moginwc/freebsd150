@@ -120,7 +120,9 @@ Style * Lenience
 # - DecorateTransient: ダイアログにタイトルバーなどの装飾を表示
 # - StackTransientParent: ダイアログが親ウィンドウの上に表示されるようにする
 # - FPReleaseFocusTransient: ダイアログが閉じたらフォーカスを親に戻す
-Style * DecorateTransient, StackTransientParent
+Style * DecorateTransient
+Style "*.exe" !DecorateTransient # wineの場合は無効にする
+Style * StackTransientParent
 Style * FPReleaseFocusTransient
 
 #----------------------------------------------------------------------
@@ -220,14 +222,14 @@ AddToMenu Window-Ops2 "復元"                            Iconify
 +                     ""                                Nop
 +                     "閉じる"                          Delete
 
-AddToMenu Screenshot  "スクリーンショット"                                    Title
-+                     "画面全体を取り込む..."                                 Exec scrot -f         $HOME/screenshot%Y%m%d%H%M%S.png
-+                     "アクティブウインドウを取り込む..."                     Exec scrot -b -u -f   $HOME/screenshot%Y%m%d%H%M%S.png
-+                     "アクティブウインドウの内側を取り込む..."               Exec scrot -u -f      $HOME/screenshot%Y%m%d%H%M%S.png
-+                     "選択部分を取り込む..."                                 Exec scrot -s -f      $HOME/screenshot%Y%m%d%H%M%S.png
-+                     ""                                                      Nop
-+                     "5秒後に画面全体を取り込む..."                          Exec scrot -d 5 -f    $HOME/screenshot%Y%m%d%H%M%S.png
-+                     "5秒後に画面全体を取り込む(マウスポインタを含める)..."  Exec scrot -p -d 5 -f $HOME/screenshot%Y%m%d%H%M%S.png
+AddToMenu Screenshot  "スクリーンショット"                          Title
++                     "画面全体..."                                 Exec scrot -f         $HOME/screenshot%Y%m%d%H%M%S.png
++                     "アクティブウインドウ..."                     Exec scrot -b -u -f   $HOME/screenshot%Y%m%d%H%M%S.png
++                     "アクティブウインドウの内側..."               Exec scrot -u -f      $HOME/screenshot%Y%m%d%H%M%S.png
++                     "選択部分..."                                 Exec scrot -s -f      $HOME/screenshot%Y%m%d%H%M%S.png
++                     ""                                            Nop
++                     "5秒後に画面全体..."                          Exec scrot -d 5 -f    $HOME/screenshot%Y%m%d%H%M%S.png
++                     "5秒後に画面全体(マウスポインタ含む)..."      Exec scrot -p -d 5 -f $HOME/screenshot%Y%m%d%H%M%S.png
 
 # ランチャー(firefox)右クリックメニュー
 AddToMenu firefox_menu
