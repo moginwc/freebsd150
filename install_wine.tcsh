@@ -18,6 +18,10 @@ sed -i '' 's/^"ActiveTitle"=.*/"ActiveTitle"="10 36 106"/'                 ~/.wi
 sed -i '' 's/^"GradientActiveTitle"=.*/"GradientActiveTitle"="166 202 240"/' ~/.wine/user.reg
 sed -i '' 's/^"TitleText"=.*/"TitleText"="255 255 255"/'                    ~/.wine/user.reg
 
+# 共通の設定を行う - タイトルバーの高さ・タイトルバーの左右グリップまたは横方向の余白を設定する
+sed -i '' 's/^"CaptionHeight"=.*/"CaptionHeight"="-270"/'                   ~/.wine/user.reg
+sed -i '' 's/^"CaptionWidth"=.*/"CaptionWidth"="-270"/'                     ~/.wine/user.reg
+
 # 代替フォントの設定
 nkf -W8 -w16L -Lw ./wine-japanese.reg.txt > ./wine-japanese.reg
 regedit /s ./wine-japanese.reg
