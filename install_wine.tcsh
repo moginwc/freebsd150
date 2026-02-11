@@ -30,7 +30,7 @@ regedit /s ./wine-japanese.reg
 # 秀丸インストール(Wine10以降、サイレントインストールができなくなったので、
 #   インストーラー形式のファイルを強制的に展開してProgram Files以下にファイルコピーをしています。よって関連付けなどが抜けます)
 sudo pkg install -y cabextract # 秀丸のインストーラーの実態は.cabファイル
-fetch https://hide.maruo.co.jp/software/bin3/hm950_x64_signed.exe
+fetch https://hide.maruo.co.jp/software/bin/hm950_x64_signed.exe
 if ( -f ./hm950_x64_signed.exe) then
     mkdir hidemaru
     cabextract -d ./hidemaru hm950_x64_signed.exe
